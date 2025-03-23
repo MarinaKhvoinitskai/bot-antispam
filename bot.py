@@ -1,4 +1,4 @@
-notepad bot.pyimport os
+import os
 import telebot
 import requests
 from flask import Flask, request
