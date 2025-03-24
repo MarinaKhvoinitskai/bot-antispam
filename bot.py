@@ -1,12 +1,11 @@
 import os
 import telebot
-import requests
 from flask import Flask, request
 
-# Загружаем переменные окружения (будут настроены в Railway)
-TOKEN = os.getenv("BOT_TOKEN")  # Токен бота из BotFather
-CHAT_ID = os.getenv("CHAT_ID")  # ID Telegram-чата
-RAILWAY_URL = os.getenv("RAILWAY_URL")  # Railway URL (добавим позже)
+# Загружаем переменные окружения
+TOKEN = os.getenv("BOT_TOKEN")            # токен из Railway
+CHAT_ID = os.getenv("CHAT_ID")            # ID чата
+RAILWAY_URL = os.getenv("RAILWAY_URL")    # адрес Railway (добавится позже автоматически)
 
 bot = telebot.TeleBot(TOKEN)
 app = Flask(__name__)
